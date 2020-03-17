@@ -1,0 +1,5 @@
+com\rolands\MainConfig.class
+com\rolands\MainController.class
+com\rolands\MainWebInit.class
+com\rolands\service\calc\CalcService.class
+com\rolands\MainRestController.class

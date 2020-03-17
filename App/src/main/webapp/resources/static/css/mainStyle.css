@@ -1,0 +1,45 @@
+/* start */
+
+.main-box {
+	background-image: url("/img/background-orange.jpg");
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 5% auto 5%;
+	grid-template-rows: 5% auto 5%;
+
+}
+.box {
+
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 2;
+	
+}
+.sub-box {
+
+	background-color: #333533 ;
+	float: left;
+	width: 50%;
+	height: 45%;
+	display: grid;
+	grid-template-columns: 2% auto 2%;
+	grid-template-rows: 40% auto 35%;
+}
+.sub-box-label {
+
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 2;
+	text-align: center;
+	font-size: 3vw;
+	color: #F5CB5C;
+	font-weight: bold;
+}
+.sub-box:hover { background-color: #F5CB5C; }
+.sub-box:hover > .sub-box-label {color: #000000;}
+
+
+/* end */
