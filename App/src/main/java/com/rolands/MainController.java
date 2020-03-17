@@ -1,11 +1,12 @@
 package com.rolands;
 
+import com.rolands.service.calc.CalcService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -29,11 +30,19 @@ public class MainController {
         return mv;
     }
 
+    @RequestMapping("/calc")
+    public ModelAndView calc() { // add() calls action related page
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("Calculate/calculator");
+        return mv;
+    }
+
     @RequestMapping("/add")
     public ModelAndView addedView(HttpServletRequest request, HttpServletResponse response) { // add() calls action related page
         int i = Integer.parseInt(request.getParameter("t1"));
         int j = Integer.parseInt(request.getParameter("t2"));
-        int k = i + j;
+        CalcService cs = new CalcService();
+        int k = cs.add(i, j);
 
         ModelAndView mv = new ModelAndView();
         mv.setViewName("Calculate/display");

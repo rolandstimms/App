@@ -29,5 +29,7 @@ public class MainConfig implements WebMvcConfigurer {
         registry.addResourceHandler("/src/**")
                 .addResourceLocations("/resources/static/css/","/resources/static/script/");
         // no static file should by with the same name. Preferable example "indexStyle" counterpart -> "indexScript"
+        registry.addResourceHandler("/img/**")
+                .addResourceLocations("/resources/static/images/");
     }
 }
