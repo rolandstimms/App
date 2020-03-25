@@ -13,16 +13,13 @@
 </head>
 
 <body>
-
+<!-- <div class="boxx"> -->
 	<div class="calc-box">
 		<div class="calc-input-box">
 			<div class="calc-hist" value="">
 
 			</div>
 			<div class="calc-input">
-<!-- 				<div class="calc-prev" id="previous" value="">
-				
-				</div> -->
 				<div class="calc-curr" id="output" prev="" curr="">
 				
 				</div>
@@ -135,8 +132,9 @@
 			<!-- ------ -->
 		</div>
 	</div>
-
+<!-- </div> -->
 </body>
+
 
 <script src="/src/calcScript.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

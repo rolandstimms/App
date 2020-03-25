@@ -1,13 +1,14 @@
 /* start */
 
 .main-box {
-	background-image: url("/img/background-orange.jpg");
+
+	/*background-image: url("/img/background-orange.jpg");*/
+	background-color: #F5CB5C;
 	width: 100%;
 	height: 100%;
 	display: grid;
-	grid-template-columns: 5% auto 5%;
-	grid-template-rows: 5% auto 5%;
-
+	grid-template-columns: 10% auto 10%;
+	grid-template-rows: 15% auto 15%;
 }
 .box {
 
@@ -15,14 +16,16 @@
 	grid-column-end: 3;
 	grid-row-start: 2;
 	grid-row-end: 2;
-	
+	border-width: 0.2vw;
+	border-style: solid;
+	border color: #333533;
 }
 .sub-box {
 
 	background-color: #333533 ;
 	float: left;
 	width: 50%;
-	height: 45%;
+	height: 35%;
 	display: grid;
 	grid-template-columns: 2% auto 2%;
 	grid-template-rows: 40% auto 35%;

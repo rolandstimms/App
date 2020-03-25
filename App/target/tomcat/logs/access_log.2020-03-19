@@ -1,0 +1,13 @@
+0:0:0:0:0:0:0:1 - - [19/Mar/2020:12:15:02 +0200] "GET / HTTP/1.1" 200 1351 http-bio-8080-exec-2 202
+0:0:0:0:0:0:0:1 - - [19/Mar/2020:12:15:02 +0200] "GET /src/swaggerScript.js HTTP/1.1" 304 - http-bio-8080-exec-1 19
+0:0:0:0:0:0:0:1 - - [19/Mar/2020:12:15:02 +0200] "GET /src/mainStyle.css HTTP/1.1" 304 - http-bio-8080-exec-3 27
+0:0:0:0:0:0:0:1 - - [19/Mar/2020:12:15:04 +0200] "GET /competition HTTP/1.1" 200 642 http-bio-8080-exec-5 14
+0:0:0:0:0:0:0:1 - - [19/Mar/2020:12:15:04 +0200] "GET /src/compScript.js HTTP/1.1" 304 - http-bio-8080-exec-4 5
+0:0:0:0:0:0:0:1 - - [19/Mar/2020:12:15:04 +0200] "GET /src/compStyle.css HTTP/1.1" 304 - http-bio-8080-exec-6 13
+0:0:0:0:0:0:0:1 - - [19/Mar/2020:12:15:11 +0200] "GET /h2-console HTTP/1.1" 404 949 http-bio-8080-exec-10 3
+0:0:0:0:0:0:0:1 - - [19/Mar/2020:12:17:01 +0200] "GET /h2-console HTTP/1.1" 404 949 http-bio-8080-exec-2 87
+0:0:0:0:0:0:0:1 - - [19/Mar/2020:12:18:41 +0200] "GET /h2-console HTTP/1.1" 404 949 http-bio-8080-exec-2 72
+0:0:0:0:0:0:0:1 - - [19/Mar/2020:12:20:35 +0200] "GET /h2 HTTP/1.1" 404 949 http-bio-8080-exec-2 98
+0:0:0:0:0:0:0:1 - - [19/Mar/2020:12:23:51 +0200] "GET / HTTP/1.1" 200 1351 http-bio-8080-exec-2 141
+0:0:0:0:0:0:0:1 - - [19/Mar/2020:12:23:53 +0200] "GET /competition HTTP/1.1" 200 642 http-bio-8080-exec-3 13
+0:0:0:0:0:0:0:1 - - [19/Mar/2020:12:23:56 +0200] "GET /h2 HTTP/1.1" 404 949 http-bio-8080-exec-4 4

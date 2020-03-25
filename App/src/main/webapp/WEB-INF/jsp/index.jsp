@@ -27,10 +27,10 @@
 			</a>
 			<!--SUBBOXEND-->
 			<!--SUBBOXSTART-->
-			<a href="">
+			<a href="/competition">
  				<div class="sub-box">
 					<div class="sub-box-label">
-						Project X
+						Events
 					</div>
 				</div>
 			</a>

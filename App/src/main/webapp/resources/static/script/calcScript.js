@@ -4,29 +4,17 @@ if (window.location.pathname == "/calc") {
 
 	function addNumber(id) {
 
-
-
-
 		var output = document.getElementById("output");
 		var prev = output.getAttribute("prev");
 		var op = findActiveOperator();
 		var hist = document.getElementsByClassName("calc-hist")[0];
 		var hop = hist.getAttribute("value");
-		//if (op == "false" && prev == "") {
-			
-			// var curr = output.getAttribute("curr");
-			// output.setAttribute("prev", curr);
-			// output.setAttribute("curr", id);
-			// output.innerHTML = id;
-		//} else {
+		var curr = output.getAttribute("curr");
+		var finalNr = "" + curr + id;
+		output.setAttribute("curr", finalNr);
+		output.innerHTML = finalNr;
 
-			var curr = output.getAttribute("curr");
-			var finalNr = "" + curr + id;
-			output.setAttribute("curr", finalNr);
-			output.innerHTML = finalNr;
-		//}
 	}
-
 	function addElement(id) {
 
 		if (id == "equal") {
@@ -59,10 +47,11 @@ if (window.location.pathname == "/calc") {
 			document.getElementById("output").setAttribute("prev", "");
 			document.getElementById("output").setAttribute("curr", "");
 			document.getElementById("output").innerHTML = "";
+			document.getElementsByClassName("calc-hist")[0].setAttribute("value", "");
+			document.getElementsByClassName("calc-hist")[0].innerHTML = "";
 			clearAllOperation();
 		}
 	}
-
 	function addOperation (id) {
 		if (id == "add") {
 
@@ -82,8 +71,7 @@ if (window.location.pathname == "/calc") {
 			clearOperation(id);
 		}
 	}
-
-	function doOperation (id, isPushed)  {
+	function doOperation (id, isPushed)  { 
 
 		var output = document.getElementById("output");
 		var previousVal = output.getAttribute("prev");
@@ -108,9 +96,6 @@ if (window.location.pathname == "/calc") {
 				var home = "http://" + location.host;
 				var address = home + "/calc" + "/parse";
 
-				//console.log(jsonBody)
-				//console.log(address);
-
 				$.ajax(
 					{
 						type: "POST",
@@ -134,7 +119,6 @@ if (window.location.pathname == "/calc") {
 			}
 		} else { alert("No value written!"); clearAllOperation }
 	}
-
 	function doEquation(id) {
 
 		var output = document.getElementById("output");
@@ -185,7 +169,6 @@ if (window.location.pathname == "/calc") {
 			)
 		}
 	}
-
 	function checkNumber(numb) {
 
 		var count = 0;
@@ -200,7 +183,6 @@ if (window.location.pathname == "/calc") {
 		} else { return "good"}
 		
 	}
-
 	function getHistory() {
 
 		var hist = document.getElementsByClassName("calc-hist")[0];
@@ -214,7 +196,6 @@ if (window.location.pathname == "/calc") {
 		hist.setAttribute("value", value);
 		hist.innerHTML = value;
 	}
-
 	function findActiveOperator() {
 
 		var add = document.getElementById("add").getAttribute("value");
@@ -227,7 +208,6 @@ if (window.location.pathname == "/calc") {
 		if (div == 1)  { return "div";}
 		return "false";
 	}
-
 	function clearOperation (id) {
 
 		if (id != "add") { document.getElementById("add").setAttribute("value", 0); }
@@ -235,7 +215,6 @@ if (window.location.pathname == "/calc") {
 		if (id != "mul") { document.getElementById("mul").setAttribute("value", 0); }
 		if (id != "div") { document.getElementById("div").setAttribute("value", 0); }
 	}
-
 	function clearAllOperation () {
 		
 		document.getElementById("add").setAttribute("value", 0);

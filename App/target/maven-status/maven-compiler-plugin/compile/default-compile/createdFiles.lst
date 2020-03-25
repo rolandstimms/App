@@ -1,5 +1,9 @@
 com\rolands\MainConfig.class
+com\rolands\service\calc\AddService.class
+com\rolands\dbConfig.class
 com\rolands\MainController.class
+com\rolands\model\Events.class
 com\rolands\MainWebInit.class
+com\rolands\dbController.class
 com\rolands\service\calc\CalcService.class
 com\rolands\MainRestController.class

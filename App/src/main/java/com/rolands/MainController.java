@@ -1,6 +1,7 @@
 package com.rolands;
 
-import com.rolands.service.calc.CalcService;
+import com.rolands.service.calc.AddService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -10,6 +11,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.sql.DataSource;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 @Controller
 public class MainController {
@@ -41,8 +47,8 @@ public class MainController {
     public ModelAndView addedView(HttpServletRequest request, HttpServletResponse response) { // add() calls action related page
         int i = Integer.parseInt(request.getParameter("t1"));
         int j = Integer.parseInt(request.getParameter("t2"));
-        CalcService cs = new CalcService();
-        int k = cs.add(i, j);
+        AddService as = new AddService();
+        int k = as.add(i, j);
 
         ModelAndView mv = new ModelAndView();
         mv.setViewName("Calculate/display");
@@ -63,6 +69,25 @@ public class MainController {
     public ModelAndView swaggerView() { // add() calls action related page
         ModelAndView mv = new ModelAndView();
         mv.setViewName("Swagger/mainSwagger");
+        return mv;
+    }
+
+    @RequestMapping("/competition")
+    public ModelAndView competitionView() { // add() calls action related page
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("Competition/competition");
+        return mv;
+    }
+    @RequestMapping("/create_event")
+    public ModelAndView createCompetitionView() { // add() calls action related page
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("Competition/competition");
+        return mv;
+    }
+    @RequestMapping("/browse_event")
+    public ModelAndView ompetitionView() { // add() calls action related page
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("Competition/competition");
         return mv;
     }
 

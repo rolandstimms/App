@@ -1,7 +1,7 @@
 /* start */
 
 body {
-	/*background-image: url("/img/background-orange.jpg");*/
+
 }
 
 .calc-box {
@@ -37,6 +37,8 @@ body {
 	grid-row-end: 2;
 	color: #F5CB5C;
 	text-align: right;
+	padding-right: 2%;
+	padding-top: 0.1vw;
 }
 .calc-input {
 
@@ -60,6 +62,8 @@ body {
 	font-size: 3.2vw;
 	text-align: right;
 	color: #333533;
+	padding-right: 2%;
+	padding-top: 0.3vw;
 }
 .calc-button-box {
 
